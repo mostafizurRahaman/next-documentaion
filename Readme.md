@@ -55,7 +55,8 @@ npx create-next-app@latest
 -  SSR pages are generated upon request.
 -  SSR only executes on server.
 -  It's Never Run on Browser.
-- যখন ইউজার এর প্রতি রিকুয়েস্টে নতুন করে ডাটা জেনেরেট করতে হবে তখন আমরা SSR ব্যবহার করবো। 
+-  যখন ইউজার এর প্রতি রিকুয়েস্টে নতুন করে ডাটা জেনেরেট করতে হবে তখন আমরা SSR
+   ব্যবহার করবো।
 -  For Every Request Needs to rebuild the components .
 -  `getServerSideProps() : ` We can use get Static Props for serverside
    rendering
@@ -67,7 +68,17 @@ npx create-next-app@latest
    Static HTML Files.
 -  After generated Static files on built time , We store our static files on
    Server.
-- আর ইউজার রিকুয়েস্ট করার আগে যদি কোনো একটা ফাইল তৈরী করে রাখতে চাই এবং ইউজার রিকুয়েস্ট করার সাথে সাথে দেখাবো সেই ক্ষেত্রে  আমরা SSG ব্যবহার করবো । 
+-  আর ইউজার রিকুয়েস্ট করার আগে যদি কোনো একটা ফাইল তৈরী করে রাখতে চাই এবং ইউজার
+   রিকুয়েস্ট করার সাথে সাথে দেখাবো সেই ক্ষেত্রে আমরা SSG ব্যবহার করবো ।
 -  SSG hepls you to build static data in built time. -` getStaticProps()` and
    `getStaticPaths()`: We can use getStaticPaths() and getStaticProps() for
    static site generation.
+
+## What is CSR ? What is Client Side Render ?
+
+-  CSR Means Client Side Rendering.
+-  With CSR Your website generate HTML pages or files on Client side after
+   downloading from server for every user request
+-  CSR is not SEO Friendly
+-  We can use useEffect to impliment Client Side Rendering in Our next
+   appliaction.
