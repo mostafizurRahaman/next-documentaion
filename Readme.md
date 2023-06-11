@@ -38,34 +38,35 @@
 -  ##### Api Routing
 -  ##### Support for CSS modules (CSS for each page)
 -  ##### Image optimization
--  ##### TypeScript Support & Fast Refresh 
--  ##### Development & Production build system. 
+-  ##### TypeScript Support & Fast Refresh
+-  ##### Development & Production build system.
 
 ## What can we build with Next.js ?
-- #####  :point_right: MVP - Minimum Viable Product 
-- #####  :point_right: Single Page Application / Website 
-- #####  :point_right:  JamStack Websites 
-- #####  :point_right:  Ecommece & Retails websites. 
-- #####  :point_right:  Complex and demanding web applications. 
+
+-  ##### :point_right: MVP - Minimum Viable Product
+-  ##### :point_right: Single Page Application / Website
+-  ##### :point_right: JamStack Websites
+-  ##### :point_right: Ecommece & Retails websites.
+-  ##### :point_right: Complex and demanding web applications.
 
 ## Next JS Installation :
 
 -Step 1: Run Command :
 
-```
+```bash
 npx create-next-app@latest
 ```
 
--  What is your project name ? -> `Enter Your Project Name` example :
-   `my-next-app`
--  Would you like to use `TypeScript` with this project? -> select Yes or No.
--  Would you like to use`Eslint`with this project? -> select `Yes` or` No`.
--  Would you like to use Tailwind CSS with this project? -> select `Yes` or
-   `No`.
--  Would you like to use `src/ directory ` with this project? -> select` Yes`
--  Use app router (recommended)? -> `Yes `
--  Would you like to customize your the default `import alias`? `Yes`
--  What Import Elias would you like configured? -> ` Press Enter`
+```bash
+- What is your project named? my-app
+- Would you like to use TypeScript with this project? No / Yes
+- Would you like to use ESLint with this - - project? No / Yes
+- Would you like to use Tailwind CSS with this project? No / Yes
+- Would you like to use `src/` directory with this project? No / Yes
+- Use App Router (recommended)? No / Yes
+- Would you like to customize the default import alias? No / Yes
+```
+
 -  wait for install........
 -  After Installing run the project with ` npm run dev`
 
@@ -109,3 +110,57 @@ npx create-next-app@latest
 -  CSR is not SEO Friendly
 -  We can use useEffect to impliment Client Side Rendering in Our next
    appliaction.
+
+## Folder Structure of Next JS:
+
+-  ##### `Readme.md` - Readme.md file contains documention about project
+-  ##### `package.json` - package.json file contains scripts, installed dependencise and meta data.
+
+-  ##### `package-lock.json` - package-lock.json file contains Dev Dependencies of our project.
+-  ##### `next.config.js` - we can add our all configuration for next js framework at `next.config.js` file.
+
+-  ##### `jsconfig.json` - we can add our javaScript configarations at `jsconfig.json` file.
+
+-  ##### `.gitignore` : .gitignore contains the file name which we cann't want to push on github or gitLab or others .
+
+-  ##### :file_folder:`.next `: After `npm run build ` the :file_folder: .next created. It's contains all build related files after building our project.
+
+-  ##### :file_folder: `node_modules` : `node_modules` folder contains all details about libraris and installed packages.
+
+-  ##### :file_folder: `public`: `public` folder contains all public static resources like images, files, documents etc.
+
+-  ##### :file_folder:`src` : :file_folder:`src` contains :file_folder:`app` folder.
+
+-  ##### :file_folder:`src/`:file_folder:`app/` : app folder contains some pages, layouts, styles etc.
+   -  ##### The file under :file_folder:`app/`:
+   -  ##### `favicon.ico`: It's the favicon of our website.
+   -  ##### `layout.js` :`layout.js` file the main Entry file of our Next Js Website . Which get all `Pages` of our website as `children`
+   -  ##### `page.js` : `page.js` is the Home page of our website.
+
+## How to Use Event in Next Js Component ? or `Use Client ` or ` Client Component`
+   - ###  What is use Client ?
+      - `"use Client" ` is a convention. 
+      - To use a Client Component, create a file inside app and add the ` "use client"` directive at the top of the file (before any imports). 
+      - `"use client"` enables client interaction on a next js component.
+   - ### How to use `"use client"` & create client component?
+      1. Create a Component.
+      2. Write `use client` at top of the component otherwise the componet shows error
+         and not support `event`
+      3. `use client` Component helps us to use `events ` in `client side`.
+      4. Without writing `use client` we cann't use `events` in next js.
+      5. Example : We Can use a `onClick` event on `<button></button>` . After clicking shows an alert.
+            
+            ```js
+            "use client";
+               import styles from "./page.module.css";
+
+               export default function Home() {
+                  return (
+                     <main className={styles.main}>
+                        <button onClick={() => alert("Hello Next Js Developers")}>
+                           Click me
+                        </button>
+                     </main>
+                  );
+            }
+            ```
