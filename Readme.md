@@ -3,6 +3,7 @@
 ## What is next Js ?
 
 -  ##### Next JS is an open source, light weight React JS Framework that helps us to develope a full-stack web application.
+-  ##### Next JS is a React Js Framework , that helps us to build a superfast and extremly user-friendly static website.
 -  ##### Next.js is a flexible React framework that gives you building blocks to create fast web applications.
 -  ##### Next js handles toolings and configurations for React Application
 -  ##### Next Js Provides Additional Structures, Features and Optimizations for your Application.
@@ -23,6 +24,29 @@
 -  ##### SEO Friendly Website
 -  ##### File Based Routing
 -  ##### Nested Routes
+
+# Why we use Next.js ?
+
+-  ##### SEO Friendly websites
+-  ##### Server Side Rendering (SSR)
+-  ##### Static Side Generation (SSG)
+-  ##### Client Side Rendering (CSR)
+-  ##### Super Fast
+-  ##### Easy to Scan
+-  ##### File Based Routing
+-  ##### Dynamic & Nested Routing
+-  ##### Api Routing
+-  ##### Support for CSS modules (CSS for each page)
+-  ##### Image optimization
+-  ##### TypeScript Support & Fast Refresh 
+-  ##### Development & Production build system. 
+
+## What can we build with Next.js ?
+- #####  :point_right: MVP - Minimum Viable Product 
+- #####  :point_right: Single Page Application / Website 
+- #####  :point_right:  JamStack Websites 
+- #####  :point_right:  Ecommece & Retails websites. 
+- #####  :point_right:  Complex and demanding web applications. 
 
 ## Next JS Installation :
 
@@ -57,6 +81,7 @@ npx create-next-app@latest
 -  It's Never Run on Browser.
 -  যখন ইউজার এর প্রতি রিকুয়েস্টে নতুন করে ডাটা জেনেরেট করতে হবে তখন আমরা SSR
    ব্যবহার করবো।
+-  SSR is Faster then CSR.
 -  For Every Request Needs to rebuild the components .
 -  `getServerSideProps() : ` We can use get Static Props for serverside
    rendering
@@ -70,6 +95,8 @@ npx create-next-app@latest
    Server.
 -  আর ইউজার রিকুয়েস্ট করার আগে যদি কোনো একটা ফাইল তৈরী করে রাখতে চাই এবং ইউজার
    রিকুয়েস্ট করার সাথে সাথে দেখাবো সেই ক্ষেত্রে আমরা SSG ব্যবহার করবো ।
+
+-  SSG is Faster than SSR
 -  SSG hepls you to build static data in built time. -` getStaticProps()` and
    `getStaticPaths()`: We can use getStaticPaths() and getStaticProps() for
    static site generation.
