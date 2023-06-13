@@ -152,12 +152,23 @@ npx create-next-app@latest
       -  Create a folder with `page_name `and `open `
       -  Create a `page.js` or ` page.tsx`or`page.jsx`or`page.ts ` file
 
-## Link and Navigation :
+## Link :
 
 -  **`Link`** component is a built in component of `Next.js`
 -  **`Link`** component helps us to navigate one page to another page.
 -  **`Link`** component has a **`href="/path"`** attribute which get `paths` as
    value
+
+## `useRouter()` for Navigation :
+
+-  we use use router for navigation.
+-  use router return a object.
+-  the object contains `back()` , `fastRefresh()`, `push()`, `forward()`,
+   `push()`, `replace()`, `refetch()`.
+
+   -  `router.push()` helps us to `navigate one page another page `
+   -  `router.back()` helps us to`back()` from `previous route`.
+   -  `router.forword()` helps us to `navigate` from which route we `back()`
 
 -  ##### **How to **`Link`** component ?**
 
