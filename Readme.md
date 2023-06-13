@@ -140,20 +140,52 @@ npx create-next-app@latest
 ## Routing in Next Js:
 
 -  ### File Based Routing :
+
    -  Next Js Follows file based routing.
    -  When a file added to the :file_folder:`src/app ` folder in a project by
       default all file become available as route
-   -  Home Route = / = :file_folder:src/:file_folder:app/page.js
-   -  About Route = /about = :file_folder:src/:file_folder:app/about.js
-   -  #### For making a route follow below instruction :
-      -  Go to :file_folder:src/:file_folder:app/
-      -  Create a folder and add name For Example: :file_folder:blog
-      -  Open the folder
-      -  And Create a file with name `page.js` or `page.jsx` or `page.ts` or
-         `page.tsx`.
-      - And try to find the page `base_url/folder_name`
-      - Example Image: 
-      ![File Based Routing](img/file_based_routing.png); 
+   -  Home Page Routing : ` "src/app/page.js"`
+   -  Other Page Routing : `"src/app/Folder_name_of_page/page.js"`
+
+   -  ##### For making a route follow below instruction :
+      -  Open `src/app`
+      -  Create a folder with `page_name `and `open `
+      -  Create a `page.js` or ` page.tsx`or`page.jsx`or`page.ts ` file
+
+## Link and Navigation :
+
+-  **`Link`** component is a built in component of `Next.js`
+-  **`Link`** component helps us to navigate one page to another page.
+-  **`Link`** component has a **`href="/path"`** attribute which get `paths` as
+   value
+
+-  ##### **How to **`Link`** component ?**
+
+   -  Import Link from `'next/link'`
+
+   ```js
+   import Link from "next/link";
+   ```
+
+   -  Example :
+
+   ```js
+   import Link from "next/link";
+
+   const page = () => {
+      return (
+         <div>
+            <nav>
+               <Link href="/">Home</Link>
+               <Link href="/about">About</Link>
+               <Link href="/login">Login</Link>
+            </nav>
+         </div>
+      );
+   };
+
+   export default page;
+   ```
 
 # Interview Questions:
 
