@@ -137,30 +137,54 @@ npx create-next-app@latest
    -  ##### `layout.js` :`layout.js` file the main Entry file of our Next Js Website . Which get all `Pages` of our website as `children`
    -  ##### `page.js` : `page.js` is the Home page of our website.
 
-## How to Use Event in Next Js Component ? or `Use Client ` or ` Client Component`
-   - ###  What is use Client ?
-      - `"use Client" ` is a convention. 
-      - To use a Client Component, create a file inside app and add the ` "use client"` directive at the top of the file (before any imports). 
-      - `"use client"` enables client interaction on a next js component.
-   - ### How to use `"use client"` & create client component?
-      1. Create a Component.
-      2. Write `use client` at top of the component otherwise the componet shows error
-         and not support `event`
-      3. `use client` Component helps us to use `events ` in `client side`.
-      4. Without writing `use client` we cann't use `events` in next js.
-      5. Example : We Can use a `onClick` event on `<button></button>` . After clicking shows an alert.
-            
-            ```js
-            "use client";
-               import styles from "./page.module.css";
+# Interview Questions:
 
-               export default function Home() {
-                  return (
-                     <main className={styles.main}>
-                        <button onClick={() => alert("Hello Next Js Developers")}>
-                           Click me
-                        </button>
-                     </main>
-                  );
-            }
-            ```
+## 1. How to Use Event in Next Js Component ? or `Use Client ` or ` Client Component`
+
+-  ### What is use Client ?
+   -  `"use Client" ` is a convention.
+   -  To use a Client Component, create a file inside app and add the
+      ` "use client"` directive at the top of the file (before any imports).
+   -  `"use client"` enables client interaction on a next js component.
+-  ### How to use `"use client"` & create client component?
+
+   1. Create a Component.
+   2. Write `use client` at top of the component otherwise the componet shows
+      error and not support `event`
+   3. `use client` Component helps us to use `events ` in `client side`.
+   4. Without writing `use client` we cann't use `events` in next js.
+   5. Example : We Can use a `onClick` event on `<button></button>` . After
+      clicking shows an alert.
+
+      ```js
+      "use client";
+      import styles from "./page.module.css";
+
+      export default function Home() {
+         return (
+            <main className={styles.main}>
+               <button onClick={() => alert("Hello Next Js Developers")}>
+                  Click me
+               </button>
+            </main>
+         );
+      }
+      ```
+
+## 2. What is Server Component ?
+
+-  Server Component is a component thats renders on server.
+-  By default, All component of next js is server side components.
+-  They are closer to backend.
+-  Server Components are secure and seo friendly
+
+## 3. What is Client Component ?
+
+-  Client Side Component is a component thats renders on client side.
+-  We make client component by using `'use client"` directives.
+-  All Ui-related code and events should be written here.
+
+## 4. Can we use client & server component same time ? 
+- Yes. You can  use client and server components at the same time and same page. 
+- Example Image: 
+   ![Client and Server Side Components](img/next_js_client_server.png); 
