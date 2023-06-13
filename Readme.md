@@ -25,7 +25,7 @@
 -  ##### File Based Routing
 -  ##### Nested Routes
 
-# Why we use Next.js ?
+## Why we use Next.js ?
 
 -  ##### SEO Friendly websites
 -  ##### Server Side Rendering (SSR)
@@ -137,6 +137,24 @@ npx create-next-app@latest
    -  ##### `layout.js` :`layout.js` file the main Entry file of our Next Js Website . Which get all `Pages` of our website as `children`
    -  ##### `page.js` : `page.js` is the Home page of our website.
 
+## Routing in Next Js:
+
+-  ### File Based Routing :
+   -  Next Js Follows file based routing.
+   -  When a file added to the :file_folder:`src/app ` folder in a project by
+      default all file become available as route
+   -  Home Route = / = :file_folder:src/:file_folder:app/page.js
+   -  About Route = /about = :file_folder:src/:file_folder:app/about.js
+   -  #### For making a route follow below instruction :
+      -  Go to :file_folder:src/:file_folder:app/
+      -  Create a folder and add name For Example: :file_folder:blog
+      -  Open the folder
+      -  And Create a file with name `page.js` or `page.jsx` or `page.ts` or
+         `page.tsx`.
+      - And try to find the page `base_url/folder_name`
+      - Example Image: 
+      ![File Based Routing](img/file_based_routing.png); 
+
 # Interview Questions:
 
 ## 1. How to Use Event in Next Js Component ? or `Use Client ` or ` Client Component`
@@ -184,7 +202,8 @@ npx create-next-app@latest
 -  We make client component by using `'use client"` directives.
 -  All Ui-related code and events should be written here.
 
-## 4. Can we use client & server component same time ? 
-- Yes. You can  use client and server components at the same time and same page. 
-- Example Image: 
-   ![Client and Server Side Components](img/next_js_client_server.png); 
+## 4. Can we use client & server component same time ?
+
+-  Yes. You can use client and server components at the same time and same page.
+-  Example Image:
+   ![Client and Server Side Components](img/next_js_client_server.png);
