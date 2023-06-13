@@ -152,6 +152,17 @@ npx create-next-app@latest
       -  Create a folder with `page_name `and `open `
       -  Create a `page.js` or ` page.tsx`or`page.jsx`or`page.ts ` file
 
+### Nested Routing In Next js :-
+
+-  Nested Route is a route within another route.
+-  Nested routes help in the categorization of web pages.
+-  Nested route helps to create multiple sub-routes into root directory.
+-  Nested route syntax : `root/segment/leaf segment`    :arrow_right: `app/dashboard/settings` or `app/dashboard/addinfo`. 
+
+- The try to load your page by `http://localhost:3000/dashoboard/settings`   
+- Example Image: 
+![nested Routing](img/next_route.png)
+
 ## Link :
 
 -  **`Link`** component is a built in component of `Next.js`
