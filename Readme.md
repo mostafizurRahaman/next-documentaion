@@ -299,7 +299,7 @@ npx create-next-app@latest
    export default page;
    ```
 
-   -  [dynamic Route Image](img/dynamic_routing.png);
+   -  ![dynamic Route Image](img/dynamic_routing.png)
 
 ## Link :
 
