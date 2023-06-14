@@ -71,6 +71,15 @@ npx create-next-app@latest
 -  wait for install........
 -  After Installing run the project with ` npm run dev`
 
+## What is Server Side Rendering ?
+
+-  Server-side rendering involves the rendering of the web page on the server
+   before delivering it to the client’s device. When a user requests a page, the
+   server renders the component on the server side, then sends the fully
+   rendered HTML to the client, enabling immediate display. This process allows
+   your website to be visible to the user quickly, providing an enhanced user
+   experience.
+
 ## What is Server Side Rendering or SSR ?
 
 -  SSR Means Server Side Rendering
@@ -126,6 +135,7 @@ npx create-next-app@latest
 -  SSG hepls you to build static data in built time. -` getStaticProps()` and
    `getStaticPaths()`: We can use getStaticPaths() and getStaticProps() for
    static site generation.
+
 -  ### Static Site Generation Process :
 
    -  Create an async component .
@@ -149,45 +159,53 @@ npx create-next-app@latest
    ```
 
 -  #### Incremental Static Generation Process:
+
+   -  This feature lets you update static content without having to rebuild the
+      entire site. You can revalidate and update static pages in the background
+      as traffic comes in, ensuring content is fresh while still providing the
+      benefits of static generation.
    -  Create an async componnet.
    -  Then try to load data with `fetch` by using `await `
    -  `{next: {revalidated: time as milliseconds }}` add as second parameter of
-      `fetch `. 
-   -Example :
-   - ```js 
-      import Link from "next/link";
+      `fetch `. -Example :
+   -  ```js
+         import Link from "next/link";
 
-      const page = async () => {
-         const res = await fetch(`http://localhost:5000/users`, , {
-            next: {revalidate:  10}
-         });
+         const page = async () => {
+            const res = await fetch(`http://localhost:5000/users`, , {
+               next: {revalidate:  10}
+            });
 
-         const data = await res.json();
+            const data = await res.json();
 
-         return (
-            <div>
-               <h2>Users </h2>
-               <div className="grid grid-cols-4 gap-4 capitalize">
-                  {data.map((u) => (
-                     <div
-                        className=" bg-blue-500 px-4 py-2 text-white border-1 rounded-md border-red-500 "
-                        key={u._id}
-                     >
-                        <h1 className="uppercase text-white text-center">{u.name}</h1>
-                        <Link href={`users/${u._id}`}>Details</Link>
-                     </div>
-                  ))}
+            return (
+               <div>
+                  <h2>Users </h2>
+                  <div className="grid grid-cols-4 gap-4 capitalize">
+                     {data.map((u) => (
+                        <div
+                           className=" bg-blue-500 px-4 py-2 text-white border-1 rounded-md border-red-500 "
+                           key={u._id}
+                        >
+                           <h1 className="uppercase text-white text-center">{u.name}</h1>
+                           <Link href={`users/${u._id}`}>Details</Link>
+                        </div>
+                     ))}
+                  </div>
                </div>
-            </div>
-         );
-      };
+            );
+         };
 
-      export default page;
-   ``
+         export default page;
+      ``
+      ```
 
 ## What is CSR ? What is Client Side Render ?
 
 -  CSR Means Client Side Rendering.
+-  Client-side rendering, or browser rendering, is a process where the browser
+   downloads the HTML, CSS, and JavaScript code from the server, then renders it
+   and finally displays it on the website.
 -  With CSR Your website generate HTML pages or files on Client side after
    downloading from server for every user request
 -  CSR is not SEO Friendly
@@ -245,6 +263,43 @@ npx create-next-app@latest
 
 -  The try to load your page by `http://localhost:3000/dashoboard/settings`
 -  Example Image: ![nested Routing](img/next_route.png)
+
+### Dynamic Routing:-
+
+-  When you don't know the extract sengment name and want to create route from
+   dynamic data , you can use dynamic routes.
+-  A Dynamic Segment can be created by wrapping a folder's name in
+   `square brackets`: `[folderName]`. For example, `[id]` or `[slug]`.
+-  Dynamic Segments are passed as the` params` prop to `layout`, `page`,
+   `route`, and `generateMetadata` functions
+-  #### How to create a dynamic route:
+
+   -  make a folder and wrapping the folder name with `squre brackets`. like:
+      :file_folder:[your_folder_name]
+   -  then create a file with name page.js
+   -  you can access the dynamic `id` or `slug` in your `layout.js` , `page.js`,
+      `route.js` as props.
+   -  Example:
+
+   ```js
+   "use client";
+
+   const page = async ({ params }) => {
+      const res = await fetch(`http://localhost:5000/users/${params.userid}`);
+      const data = await res.json();
+      return (
+         <div>
+            <h1 className="text-5xl font-bold text-white px-4 py-4">
+               {data.name}
+            </h1>
+         </div>
+      );
+   };
+
+   export default page;
+   ```
+
+   -  [dynamic Route Image](img/dynamic_routing.png);
 
 ## Link :
 
