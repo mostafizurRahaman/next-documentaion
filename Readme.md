@@ -335,11 +335,15 @@ npx create-next-app@latest
 -  ### Create Global `404` page : -
    -  go to `/src/app/` folder
    -  create a file with name `not-found.js`
-   -  write your codes
+   -  write your codes -Example Image : ![Global Page](img/global-not-found.png)
 -  ### Specific routes `404`page :
-   -  go the specific folder in app route.
-   -  create a file with name `not-found.js`
-   -  write your codes
+   -  Go the specific folder
+   -  Create a folder and wrapping the folder name with squre brackets `[]` and
+      folder name start with three `dots + not-found` like
+      :file_folder:`[...not-found]
+   -  Then create file with name `page.js`.
+   -  write your code here.
+   -  Example Image: ![Specific not found page](img/not_found_page.png)
 
 ## Link :
 
