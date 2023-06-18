@@ -275,7 +275,7 @@ npx create-next-app@latest
 -  #### How to create a dynamic route:
 
    -  make a folder and wrapping the folder name with `squre brackets`. like:
-      :file_folder:[your_folder_name]
+      :file_folder:`[your_folder_name]`
    -  then create a file with name page.js
    -  you can access the dynamic `id` or `slug` in your `layout.js` , `page.js`,
       `route.js` as props.
@@ -300,6 +300,46 @@ npx create-next-app@latest
    ```
 
    -  ![dynamic Route Image](img/dynamic_routing.png)
+
+### Catch all routes:
+
+-  catch all routes helps us to get access all segment in route.
+-  make a folder and wraping `folder_name` with `squre backets` like
+   :file_folder:`[...filename]`.
+-  folder name must be start with `triple dot` `...`
+-  Example :
+-  first create a folder: :file_folder:`dashboard `
+-  we create a `[...documentation]` for catch all routes.
+-  and then create a `page.js` file
+-  Then try to get access on this all routes:
+   `localhost:3000/dashboard/documentation/feature1` or
+   `localhost:3000/dashboard/documentation/feature2` or
+   `localhost:3000/dashboard/documentation/feature3/part3`
+-  ![Catch all routes](img/catch_all_routes.png);
+-  catch all routes are passed as params props on `page.js` , `layout.js`,
+   `route.js` etc.
+-  we can access our routes as `array`.
+
+### Optional Catch All Routes :-
+
+-  Catch-all Segments can be made optional by including the parameter in double
+   square brackets: `[[...folderName]] `
+-  The difference between catch-all and optional catch-all segments is that with
+   optional, the route without the parameter is also matched
+-  Example of optional catch-all all routes:
+-  ![optional catch all routes](img/catch_all_routes.png)
+
+## 404 Page or Not Found Page :-
+
+-  The 404 page means the requested file or page that cann't exits on server.
+-  ### Create Global `404` page : -
+   -  go to `/src/app/` folder
+   -  create a file with name `not-found.js`
+   -  write your codes
+-  ### Specific routes `404`page :
+   -  go the specific folder in app route.
+   -  create a file with name `not-found.js`
+   -  write your codes
 
 ## Link :
 
