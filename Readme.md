@@ -428,6 +428,38 @@ npx create-next-app@latest
    }
    ```
 
+## Middleware in Next JS:
+
+-  Middleware allows you to run code before a request completed.
+-  ### Create a middleware :
+   -  open :file_folder:`src/`
+   -  create a file with `middlware.js` or `middleware.ts`
+   -  then write your code like below:
+   -  Import `NextResponse` from `next/server`
+   -  create a `function` with name `middleware()` and `export ` it .
+   -  Then create a `config` object with `matcher properties`. `matcher` properties
+      should be `string` or `array of string`
+   -  Example :
+
+   ```js
+         import { NextResponse } from "next/server";
+
+         export const middleware = (request) => {
+            return NextResponse.redirect(new URL("/login", request.url));
+         };
+
+         //  for single routes:
+         export const config = {
+            matcher: "/about/:path*",
+         };
+
+         //  for multiple routes:
+
+         export const config = {
+            matcher: ["/about/:path*", "/dashboard/:path*"],
+         };
+   ```
+
 # Interview Questions:
 
 ## 1. How to Use Event in Next Js Component ? or `Use Client ` or ` Client Component`
